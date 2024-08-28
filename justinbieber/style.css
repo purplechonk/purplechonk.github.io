@@ -1,0 +1,205 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff5f6d, #ffc371, #ff6f61);
+    color: #333;
+    animation: bgColorChange 5s infinite alternate;
+}
+
+@keyframes bgColorChange {
+    0% {background-color: #ff5f6d;}
+    50% {background-color: #ffb6c1;}
+    100% {background-color: #ffc371;}
+}
+
+header {
+    background-color: #ff4757;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 3em;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px #333;
+    animation: shake 0.5s infinite alternate;
+}
+
+@keyframes shake {
+    from {transform: translateX(-5px);}
+    to {transform: translateX(5px);}
+}
+
+nav {
+    background-color: #ff4757;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ff6f61;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    padding: 20px 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    animation: pulse 1s infinite alternate;
+}
+
+nav ul li a:hover {
+    background-color: #ff4757;
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+@keyframes pulse {
+    from {transform: scale(1);}
+    to {transform: scale(1.1);}
+}
+
+section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+h2 {
+    color: #ff4757;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #ffb6c1;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from {transform: translateY(0px);}
+    to {transform: translateY(-10px);}
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    animation: zoomRotate 10s infinite alternate-reverse;
+}
+
+@keyframes zoomRotate {
+    from {transform: scale(1) rotate(0deg);}
+    to {transform: scale(1.1) rotate(5deg);}
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.mySlides img:hover {
+    transform: scale(1.2);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.5} 
+    to {opacity: 1}
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active {
+    background-color: #ff4757;
+}
+
+.confession-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    border: 2px solid #ff4757;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    background: #ffb6c1;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+textarea:focus {
+    transform: scale(1.05);
+    outline: none;
+}
+
+button {
+    padding: 15px 25px;
+    margin-top: 10px;
+    background-color: #ff4757;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease
+}
+
+.confession-card:nth-child(odd) {
+    background-color: #ff6f61;
+    color: white;
+}
+
+.confession-card:nth-child(even) {
+    background-color: #ffb6c1;
+    color: #333;
+}
+
+.confession-card {
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2em;
+    display: none; /* Initially hidden */
+}
